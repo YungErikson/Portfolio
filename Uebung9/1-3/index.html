@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerregistrierung</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Benutzerregistrierung</h2>
+        <form id="registrationForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="fullName">Vollständiger Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+                <small class="text-danger" id="fullNameError"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail-Adresse</label>
+                <input type="email" class="form-control" id="email" required>
+                <small class="text-danger" id="emailError"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input type="password" class="form-control" id="password" required minlength="8">
+                <small class="text-danger" id="passwordError"></small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Passwort bestätigen</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+                <small class="text-danger" id="confirmPasswordError"></small>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Geburtsdatum</label>
+                <input type="date" class="form-control" id="birthdate" required>
+                <small class="text-danger" id="birthdateError"></small>
+            </div>
+            <div class="form-group">
+                <label for="country">Land</label>
+                <select class="form-control" id="country" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="DE">Deutschland</option>
+                    <option value="AT">Österreich</option>
+                    <option value="CH">Schweiz</option>
+                </select>
+                <small class="text-danger" id="countryError"></small>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">Ich akzeptiere die allgemeinen Geschäftsbedingungen</label>
+                <small class="text-danger" id="termsError"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrieren</button>
+            <button type="button" class="btn btn-secondary" onclick="resetForm()">Zurücksetzen</button>
+        </form>
+
+        <div id="summary" class="mt-4" style="display: none;">
+            <h3>Zusammenfassung der Registrierung</h3>
+            <p><strong>Vollständiger Name:</strong> <span id="summaryFullName"></span></p>
+            <p><strong>E-Mail-Adresse:</strong> <span id="summaryEmail"></span></p>
+            <p><strong>Geburtsdatum:</strong> <span id="summaryBirthdate"></span></p>
+            <p><strong>Land:</strong> <span id="summaryCountry"></span></p>
+            <button type="button" class="btn btn-success" onclick="submitForm()">Formular absenden</button>
+        </div>
+
+        <div id="log" class="mt-4">
+            <h3>Log</h3>
+            <ul id="logEntries"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Beispiel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Drag and Drop Beispiel</h1>
+    <p>Ziehe die Bilder in das Ziel:</p>
+
+    <figure>
+        <img id="drag1" src="cat.jpg" alt="Katze" draggable="true" ondragstart="drag(event)">
+        <figcaption><a href="https://tse3.mm.bing.net/th?id=OIP.a6fdovPOJyf8hKD7_S7n1gHaEK&pid=Api" target="_blank">Quelle</a></figcaption>
+    </figure>
+
+    <figure>
+        <img id="drag2" src="street.jpeg" alt="Strasse" draggable="true" ondragstart="drag(event)">
+        <figcaption><a href="https://images.pexels.com/photos/248159/pexels-photo-248159.jpeg" target="_blank">Quelle</a></figcaption>
+    </figure>
+
+    <figure>
+        <img id="drag3" src="dog.webp" alt="Hund" draggable="true" ondragstart="drag(event)">
+        <figcaption><a href="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" target="_blank">Quelle</a></figcaption>
+    </figure>
+    
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+        <p>Zielort für die Bilder</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

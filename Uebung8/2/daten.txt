@@ -1,0 +1,1 @@
+Dies ist eine Beispieltextdatei, die über Ajax geladen wurde.

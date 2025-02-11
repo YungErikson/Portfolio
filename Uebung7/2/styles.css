@@ -1,0 +1,53 @@
+img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: move;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+img:active {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+
+#dropzone {
+    width: 500px;
+    height: 200px;
+    border: 3px dashed #333;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* c */
+#dropzone.drag-over {
+    background-color: #cce7ff;
+    border-color: #007bff;
+}
+
+/* Text */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}

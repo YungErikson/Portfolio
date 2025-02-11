@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    border: 2px solid #007bff;
+    padding: 20px;
+    background-color: #e9f7ff;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.grid-container p {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}

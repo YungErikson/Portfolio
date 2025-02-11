@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.flex-container {
+    border: 2px solid #007bff;
+    padding: 20px;
+    background-color: #e9f7ff;
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    text-align: center;
+}

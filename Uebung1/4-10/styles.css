@@ -1,0 +1,115 @@
+/* Auch wenn diese Aufgabe auf Experimentieren und Veränderung der Code-Schnipsel abzielt,
+habe ich hier der Vollständigkeit halber so gut wie möglich meine Lösungen der einzelnen Aufgaben hinterlegt.*/
+
+/* 5.1 Formatieren der h1-Überschrift */
+h1 {
+    color: darkgreen;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* 5.2 h2 Formatierung */
+h2 {
+    color: darkblue;
+    font-size: 28px;
+}
+
+/* 5.3 Wildcard-Selektor */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 5.4 Kombinierte Selektoren */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* 6.1 Definition der Klasse paragraf */
+.paragraf {
+    color: gray;
+    font-family: Georgia, serif;
+    margin: 10px 0;
+}
+
+/* 6.2 ID spezifische Formatierung */
+#para1 {
+    color: purple;
+    font-weight: bold;
+}
+
+/* 7. Farbselektion und Schriftarten */
+.paragraf:nth-child(1) {
+    color: #ff5733;
+    font-family: Georgia, serif;
+}
+.paragraf:nth-child(2) {
+    color: #007fff55;
+    font-family: "Courier New", monospace;
+}
+
+/* 8. Schriftgröße */
+em {
+    font-size: 18px; /* Pixel */
+}
+span {
+    font-size: 1.0em; /* Em */
+}
+b {
+    font-size: 1.5rem; /* Rem */
+}
+
+/* 9. Box-Modell */
+h1, h2 {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: lightyellow;
+}
+.paragraph-container {
+    border: 1px dashed blue;
+    padding: 15px;
+}
+.paragraf {
+    border: 1px solid red;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* 9.3 Display-Eigenschaften */
+.paragraph-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 10. Box-Parameter */
+.box {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: 2px solid green;
+    margin: 15px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Alternative Darstellung von Boxen */
+.box-small {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    margin: 10px;
+    background-color: lightcoral;
+    
+}
+
+.box-large {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 3px solid orange;
+    margin: 20px;
+    background-color: lightgreen;
+}

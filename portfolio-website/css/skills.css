@@ -1,0 +1,11 @@
+section{padding:60px 0}
+.skill-card{background:#f8f9fa;border-radius:15px;padding:20px;margin-bottom:20px}
+.progress{height:25px;border-radius:12px}
+.progress-bar{width:0;animation:fillProgress 2s forwards}
+@keyframes fillProgress{to{width:var(--target-width)}}
+.hobby-card{border-radius:15px;overflow:hidden;background:#f8f9fa;box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+.hobby-card img{height:200px;object-fit:cover;border-radius:15px 15px 0 0}
+.hobby-card.fade-out{opacity:0;transform:translateY(50px)}
+.hobby-card.fade-in{opacity:1;transform:translateY(0);transition:opacity 1s ease-out,transform 1s ease-out}
+.bg-info{background-color:#0b5ed7!important;}
+.bg-warning{background-color:#ab00d6!important;}
