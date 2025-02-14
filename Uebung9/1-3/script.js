@@ -28,7 +28,6 @@ function validateForm(event) {
     const country = document.getElementById('country').value;
     const terms = document.getElementById('terms').checked;
 
-    // Vollständiger Name
     if (fullName === "") {
         document.getElementById('fullNameError').textContent = "Der vollständige Name darf nicht leer sein.";
         document.getElementById('fullNameError').style.display = "block";
@@ -37,7 +36,6 @@ function validateForm(event) {
         document.getElementById('fullNameError').style.display = "none";
     }
 
-    // E-Mail-Adresse
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         document.getElementById('emailError').textContent = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
@@ -47,7 +45,6 @@ function validateForm(event) {
         document.getElementById('emailError').style.display = "none";
     }
 
-    // Passwort
     if (password.length < 8) {
         document.getElementById('passwordError').textContent = "Das Passwort muss mindestens 8 Zeichen lang sein.";
         document.getElementById('passwordError').style.display = "block";
@@ -56,7 +53,6 @@ function validateForm(event) {
         document.getElementById('passwordError').style.display = "none";
     }
 
-    // Passwort bestätigen
     if (password !== confirmPassword) {
         document.getElementById('confirmPasswordError').textContent = "Die Passwörter stimmen nicht überein.";
         document.getElementById('confirmPasswordError').style.display = "block";
@@ -65,7 +61,6 @@ function validateForm(event) {
         document.getElementById('confirmPasswordError').style.display = "none";
     }
 
-    // Geburtsdatum
     if (birthdate === "") {
         document.getElementById('birthdateError').textContent = "Das Geburtsdatum darf nicht leer sein.";
         document.getElementById('birthdateError').style.display = "block";
@@ -74,7 +69,6 @@ function validateForm(event) {
         document.getElementById('birthdateError').style.display = "none";
     }
 
-    // Land
     if (country === "") {
         document.getElementById('countryError').textContent = "Bitte wählen Sie ein Land aus.";
         document.getElementById('countryError').style.display = "block";
@@ -83,7 +77,6 @@ function validateForm(event) {
         document.getElementById('countryError').style.display = "none";
     }
 
-    // Allgemeine Geschäftsbedingungen
     if (!terms) {
         document.getElementById('termsError').textContent = "Bitte akzeptieren Sie die allgemeinen Geschäftsbedingungen.";
         document.getElementById('termsError').style.display = "block";
@@ -115,10 +108,9 @@ function resetForm() {
 
 function submitForm() {
     endTime = new Date();
-    const timeDiff = (endTime - startTime) / 1000; // in Sekunden
+    const timeDiff = (endTime - startTime) / 1000;
     logInteraction(`Formular abgeschickt um ${endTime.toLocaleTimeString()}`);
     logInteraction(`Benötigte Zeit zum Ausfüllen: ${timeDiff} Sekunden`);
     alert('Formular erfolgreich abgeschickt!');
-    // Hier könnte das Formular an den Server gesendet werden
     resetForm();
 }

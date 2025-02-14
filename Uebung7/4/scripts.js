@@ -1,4 +1,3 @@
-// Funktion zum Hinzufügen einer Aufgabe
 function addTask() {
     const taskText = document.getElementById('task-text').value;
     const taskColor = document.getElementById('task-color').value;
@@ -25,7 +24,7 @@ function addTask() {
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
     deleteBtn.textContent = 'Löschen';
-    deleteBtn.style.display = 'none'; // Standardmäßig ausgeblendet
+    deleteBtn.style.display = 'none';
     deleteBtn.onclick = () => deleteTask(task);
 
     task.appendChild(taskContent);
@@ -34,11 +33,9 @@ function addTask() {
 
     document.getElementById('todo').querySelector('.tasks').appendChild(task);
 
-    // Formular zurücksetzen
     document.getElementById('task-text').value = '';
 }
 
-// Funktion zum Löschen einer Aufgabe (nur im Trash möglich)
 function deleteTask(task) {
     const isInTrash = task.closest('#trash .tasks') !== null;
     if (isInTrash) {
@@ -48,7 +45,6 @@ function deleteTask(task) {
     }
 }
 
-// Drag-and-Drop-Funktionen
 let draggedTask = null;
 
 function drag(event) {
@@ -66,20 +62,16 @@ function drop(event) {
     const targetColumn = event.target.closest('.tasks');
 
     if (targetColumn && draggedTask) {
-        // Entferne die Aufgabe aus dem ursprünglichen Container
         draggedTask.remove();
 
-        // Füge die Aufgabe in den neuen Container ein
         targetColumn.appendChild(draggedTask);
 
-        // Done-Spalte: Aufgaben durchstreichen
         if (targetColumn.parentElement.id === 'done') {
             draggedTask.classList.add('done');
         } else {
             draggedTask.classList.remove('done');
         }
 
-        // Trash-Spalte: Löschen-Button anzeigen
         const deleteBtn = draggedTask.querySelector('.delete-btn');
         if (targetColumn.parentElement.id === 'trash') {
             deleteBtn.style.display = 'block';
@@ -89,13 +81,11 @@ function drop(event) {
     }
 }
 
-// Event-Listener für Drag-and-Drop
 document.querySelectorAll('.tasks').forEach(column => {
     column.ondragover = allowDrop;
     column.ondrop = drop;
 });
 
-// Funktion zum Bearbeiten einer Aufgabe
 function editTask(task) {
     const newText = prompt('Neuer Aufgabentext:', task.querySelector('span').textContent);
     if (newText !== null && newText.trim() !== '') {

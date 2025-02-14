@@ -1,6 +1,6 @@
 // 3.2 Erstellen eines Canvas
 const canvas = document.getElementById('imageCanvas');
-const ctx = canvas.getContext('2d'); // 2D-Kontext global definiert
+const ctx = canvas.getContext('2d');
 
 // 3.3 Generieren eines HTMLImageElements
 function loadAndDrawImage() {
@@ -11,11 +11,10 @@ function loadAndDrawImage() {
         // 3.5 Zeichnen des Bildes auf Canvas als Hintergrund
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-        // Nach dem Laden des Bildes: Zusätzliche Zeichnungen hinzufügen
         drawOverlay();
     };
 
-    img.src = './beispiel.png'; // Beispielbild
+    img.src = './beispiel.png';
 }
 
 // 3.6 Manuelles Zeichnen auf Canvas

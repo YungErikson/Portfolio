@@ -39,13 +39,11 @@ figcaption {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* c */
 #dropzone.drag-over {
     background-color: #cce7ff;
     border-color: #007bff;
 }
 
-/* Text */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
