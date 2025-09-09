@@ -1,8 +1,0 @@
-section{padding:60px 0}
-.bio-card{padding:30px;box-shadow:0 4px 10px rgba(0,0,0,0.1);border-radius:8px;background-color:#f8f9fa;margin-bottom:20px}
-.bio-card h2{font-size:2rem;margin-bottom:20px}
-.bio-card .list-unstyled li{margin-bottom:10px}
-.highlight{animation:fadeHighlight 4s ease-out forwards}
-@keyframes fadeHighlight{0%{background-color:yellow}100%{background-color:transparent}}
-.bio-card a.btn-link{color:#0000FF;text-decoration:none}
-.bio-card a.btn-link:hover{color:#0000CC}
